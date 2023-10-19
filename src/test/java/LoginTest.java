@@ -2,11 +2,10 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.*;
 
 import praktikum.pages.AuthPage;
-import praktikum.pages.ProfilePage;
 import praktikum.user.*;
 
 
-public class LogoutTest {
+public class LoginTest {
 
     private final UserClient client = new UserClient();
     private final UserCheck check = new UserCheck();
@@ -26,21 +25,16 @@ public class LogoutTest {
     }
 
     @Test
-    public void checkUserLogout() {
+    public void checkUserLogin() {
         AuthPage authPage = new AuthPage(driverRule.getDriver());
-        ProfilePage profilePage = new ProfilePage(driverRule.getDriver());
 
-        authPage.open()
+        var result = authPage.open()
                 .waitForLoadAuthPage()
                 .typeEmail(user.getEmail())
                 .typePassword(user.getPassword())
                 .clickSignInButton()
-                .waitForLoadMainPage();
-
-        var result = profilePage.open()
-                .waitForLoadProfilePage()
-                .clickLogoutButton()
-                .isLogoutSuccessful();
+                .waitForLoadMainPage()
+                .isMainPageLoadedSuccessful();
 
         Assert.assertTrue(result);
     }

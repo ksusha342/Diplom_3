@@ -30,6 +30,10 @@ public class MainPage {
         return this;
     }
 
+    public boolean isMainPageLoadedSuccessful() {
+        return driver.findElement(MAIN_PAGE_HEADER).isDisplayed();
+    }
+
     public MainPage clickBunsSection() {
         driver.findElement(BUNS_SECTION).click();
         return this;
