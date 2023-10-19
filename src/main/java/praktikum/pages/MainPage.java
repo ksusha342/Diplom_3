@@ -12,7 +12,7 @@ import static praktikum.pages.Locators.*;
 public class MainPage {
 
     final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
-    final int DEFAULT_WAIT_INTERVAL = 5;
+    final int DEFAULT_WAIT_INTERVAL = 3;
     final WebDriver driver;
 
     public MainPage(WebDriver driver) {
@@ -26,7 +26,7 @@ public class MainPage {
 
     public MainPage waitForLoadMainPage() {
         new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_INTERVAL))
-                .until(ExpectedConditions.visibilityOfElementLocated(MAIN_TITLE));
+                .until(ExpectedConditions.visibilityOfElementLocated(LOGO));
         return this;
     }
 

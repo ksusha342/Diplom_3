@@ -3,7 +3,7 @@ import org.junit.Test;
 import praktikum.pages.MainPage;
 
 
-public class OpenSectionTest {
+public class OpenConstructorSectionTest {
     @Rule
     public DriverRule driverRule = new DriverRule();
 
