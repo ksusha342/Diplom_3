@@ -39,7 +39,7 @@ public class DriverRule extends ExternalResource {
 
     @Override
     protected void after() {
-        driver.quit();
+//        driver.quit();
     }
 
     public WebDriver getDriver() {

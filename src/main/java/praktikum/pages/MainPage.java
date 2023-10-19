@@ -62,7 +62,4 @@ public class MainPage {
                 .until(ExpectedConditions.visibilityOfElementLocated(FILLINGS_SECTION_SELECTED));
         return driver.findElement(FILLINGS_SECTION_SELECTED).isDisplayed();
     }
-
-
-
 }
