@@ -6,6 +6,8 @@ import org.junit.runners.Parameterized;
 import praktikum.AuthSource;
 import praktikum.pages.AuthPage;
 import praktikum.pages.MainPage;
+import praktikum.pages.RecoveryPage;
+import praktikum.pages.UserRegistrationPage;
 import praktikum.user.*;
 
 
@@ -17,8 +19,8 @@ public class LoginTest {
 
     private User user;
     private String accessToken;
-    private AuthSource authSource;
-    private boolean result;
+    private final AuthSource authSource;
+    private final boolean result;
 
     public LoginTest(AuthSource authSource, boolean result) {
         this.authSource = authSource;
@@ -33,8 +35,8 @@ public class LoginTest {
         return new Object[][]{
                 {AuthSource.main, true},
                 {AuthSource.profile, true},
-//                {AuthSource.registration, true},
-//                {AuthSource.recovery, true},
+                {AuthSource.registration, true},
+                {AuthSource.recovery, true},
                 {AuthSource.link, true}
         };
     }
@@ -95,11 +97,17 @@ public class LoginTest {
     }
 
     private void openRegistrationPageAuth() {
-        // TODO: to be done
+        UserRegistrationPage userRegistrationPage = new UserRegistrationPage(driverRule.getDriver());
+        userRegistrationPage.open()
+                .waitForLoadRegistrationPage()
+                .clickSignInButton();
     }
 
     private void openRecoveryPageAuth() {
-        // TODO: to be done
+        RecoveryPage recoveryPage = new RecoveryPage(driverRule.getDriver());
+        recoveryPage.open()
+                .waitForLoadRecoveryPage()
+                .clickSignUpButton();
     }
 
     private void openLinkAuth() {
