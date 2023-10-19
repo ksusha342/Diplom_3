@@ -66,4 +66,14 @@ public class MainPage {
                 .until(ExpectedConditions.visibilityOfElementLocated(FILLINGS_SECTION_SELECTED));
         return driver.findElement(FILLINGS_SECTION_SELECTED).isDisplayed();
     }
+
+    public MainPage clickSignUpButton() {
+        driver.findElement(MAIN_PAGE_SIGN_IN_BUTTON).click();
+        return this;
+    }
+
+    public MainPage clickUserProfileButton() {
+        driver.findElement(USER_PROFILE_BUTTON).click();
+        return this;
+    }
 }

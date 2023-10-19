@@ -71,4 +71,9 @@ public class UserRegistrationPage {
             return false;
         }
     }
+
+    public UserRegistrationPage clickSignInButton() {
+        driver.findElement(REGISTRATION_PAGE_SIGN_IN_BUTTON).click();
+        return this;
+    }
 }

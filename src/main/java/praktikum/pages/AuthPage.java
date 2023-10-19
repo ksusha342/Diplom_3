@@ -42,7 +42,7 @@ public class AuthPage {
     }
 
     public MainPage clickSignInButton() {
-        driver.findElement(SIGN_IN_BUTTON).click();
+        driver.findElement(AUTH_PAGE_SIGN_IN_BUTTON).click();
         return new MainPage(driver);
     }
 }
