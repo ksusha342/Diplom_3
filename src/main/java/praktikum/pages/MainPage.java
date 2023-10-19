@@ -26,7 +26,7 @@ public class MainPage {
 
     public MainPage waitForLoadMainPage() {
         new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_INTERVAL))
-                .until(ExpectedConditions.visibilityOfElementLocated(LOGO));
+                .until(ExpectedConditions.visibilityOfElementLocated(MAIN_PAGE_HEADER));
         return this;
     }
 

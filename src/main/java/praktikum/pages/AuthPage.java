@@ -41,8 +41,8 @@ public class AuthPage {
         return this;
     }
 
-    public ProfilePage clickSignInButton() {
+    public MainPage clickSignInButton() {
         driver.findElement(SIGN_IN_BUTTON).click();
-        return new ProfilePage(driver);
+        return new MainPage(driver);
     }
 }

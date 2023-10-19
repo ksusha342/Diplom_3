@@ -2,6 +2,7 @@ import io.restassured.response.ValidatableResponse;
 import org.junit.*;
 
 import praktikum.pages.AuthPage;
+import praktikum.pages.ProfilePage;
 import praktikum.user.*;
 
 
@@ -27,11 +28,15 @@ public class LogoutTest {
     @Test
     public void checkUserLogout() {
         AuthPage authPage = new AuthPage(driverRule.getDriver());
-        var result = authPage.open()
+        ProfilePage profilePage = new ProfilePage(driverRule.getDriver());
+
+        authPage.open()
                 .typeEmail(user.getEmail())
                 .typePassword(user.getPassword())
                 .clickSignInButton()
-                .open()
+                .waitForLoadMainPage();
+
+       var result = profilePage.open()
                 .waitForLoadProfilePage()
                 .clickLogoutButton()
                 .isLogoutSuccessful();

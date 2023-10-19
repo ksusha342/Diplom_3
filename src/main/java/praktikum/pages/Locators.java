@@ -3,8 +3,10 @@ package praktikum.pages;
 import org.openqa.selenium.By;
 
 public class Locators {
-    // Заголовок "Соберите бургер" в верхней части страницы
+    // Логотип в верхней части страницы
     public static final By LOGO = By.xpath(".//div[contains(@class, 'logo')]");
+    // Заголовок "Соберите бургер" в верхней части страницы
+    public static final By MAIN_PAGE_HEADER = By.xpath(".//div[contains(@class, 'logo')]");
     // Кнопка "Личный кабинет" в верхней части страницы
     public static final By USER_PROFILE_BUTTON = By.xpath("..//a[contains(@href, '/account')]");
     // Раздел "Булки" на главной странице
