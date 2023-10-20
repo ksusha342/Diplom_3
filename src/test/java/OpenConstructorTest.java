@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.*;
 
@@ -39,6 +41,8 @@ public class OpenConstructorTest {
     }
 
     @Test
+    @DisplayName("Check opening constructor through logo")
+    @Description("Check that it is possible to open constructor through logo")
     public void checkOpeningConstructorThroughLogo() {
         ProfilePage profilePage = new ProfilePage(driverRule.getDriver());
 
@@ -50,6 +54,8 @@ public class OpenConstructorTest {
     }
 
     @Test
+    @DisplayName("Check opening constructor through constructor button")
+    @Description("Check that it is possible to open constructor through constructor button")
     public void checkOpeningConstructorThroughConstructorButton() {
         ProfilePage profilePage = new ProfilePage(driverRule.getDriver());
 

@@ -12,15 +12,15 @@ public class Locators {
 
     // Заголовок "Соберите бургер" на главной странице
     public static final By MAIN_PAGE_HEADER = By.xpath(".//div[contains(@class, 'logo')]");
-    // Раздел "Булки" на главной странице
+    // Неактивный раздел "Булки" на главной странице
     public static final By BUNS_SECTION = By.xpath(".//span[text() = 'Булки']/parent::div");
     // Активный раздел "Булки" на главной странице
     public static final By BUNS_SECTION_SELECTED = By.xpath((".//div[contains(@class, 'tab_tab_type_current')]/span[text()='Булки']"));
-    // Раздел "Соусы" на главной странице
+    // Неактивный раздел "Соусы" на главной странице
     public static final By SAUCES_SECTION = By.xpath(".//span[text() = 'Соусы']/parent::div");
     // Активный раздел "Соусы" на главной странице
     public static final By SAUCES_SECTION_SELECTED = By.xpath((".//div[contains(@class, 'tab_tab_type_current')]/span[text()='Соусы']"));
-    // Раздел "Начинки" на главной странице
+    // Неактивный раздел "Начинки" на главной странице
     public static final By FILLINGS_SECTION = By.xpath(".//span[text() = 'Начинки']/parent::div");
     // Активный раздел "Начинки" на главной странице
     public static final By FILLINGS_SECTION_SELECTED = By.xpath((".//div[contains(@class, 'tab_tab_type_current')]/span[text()='Начинки']"));

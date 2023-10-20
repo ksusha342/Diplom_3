@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.*;
 
@@ -26,6 +28,8 @@ public class LogoutTest {
     }
 
     @Test
+    @DisplayName("Check user logout")
+    @Description("Check that it is possible to user logout")
     public void checkUserLogout() {
         AuthPage authPage = new AuthPage(driverRule.getDriver());
         ProfilePage profilePage = new ProfilePage(driverRule.getDriver());

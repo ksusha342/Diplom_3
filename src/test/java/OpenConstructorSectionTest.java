@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -9,6 +11,8 @@ public class OpenConstructorSectionTest {
     public DriverRule driverRule = new DriverRule();
 
     @Test
+    @DisplayName("Check opening Buns Section")
+    @Description("Check that it is possible to open buns section")
     public void checkOpenBunsSection() {
         MainPage mainPage = new MainPage(driverRule.getDriver());
         var result = mainPage.open()
@@ -21,6 +25,8 @@ public class OpenConstructorSectionTest {
     }
 
     @Test
+    @DisplayName("Check opening sauces Section")
+    @Description("Check that it is possible to open sauces section")
     public void checkOpenSaucesSection() {
         MainPage mainPage = new MainPage(driverRule.getDriver());
         var result = mainPage.open()
@@ -32,6 +38,8 @@ public class OpenConstructorSectionTest {
     }
 
     @Test
+    @DisplayName("Check opening fillings Section")
+    @Description("Check that it is possible to open fillings section")
     public void checkOpenFillingsSection() {
         MainPage mainPage = new MainPage(driverRule.getDriver());
         var result = mainPage.open()

@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.*;
 
@@ -50,6 +52,8 @@ public class LoginTest {
     }
 
     @Test
+    @DisplayName("Check user login from different ways")
+    @Description("Check that it is possible to user login from different ways")
     public void checkUserLogin() {
         AuthPage authPage = new AuthPage(driverRule.getDriver());
 

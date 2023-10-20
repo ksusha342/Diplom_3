@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.*;
 
@@ -19,6 +21,8 @@ public class OpenProfilePageTest {
 
 
     @Test
+    @DisplayName("Check opening profile page by the authorized user")
+    @Description("Check that it is possible to open profile page by the authorized user")
     public void checkOpeningProfilePageWithAuthorization() {
         user = UserGenerator.random();
 
@@ -40,6 +44,8 @@ public class OpenProfilePageTest {
     }
 
     @Test
+    @DisplayName("Check opening profile page by the unauthorized user")
+    @Description("Check that it is possible to open profile page by the unauthorized user")
     public void checkOpeningProfilePageWithoutAuthorization() {
         MainPage mainPage = new MainPage(driverRule.getDriver());
 

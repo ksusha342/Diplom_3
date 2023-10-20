@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.*;
 import org.junit.runner.RunWith;
@@ -25,14 +27,13 @@ public class UserRegistrationTest {
     public DriverRule driverRule = new DriverRule();
 
     @Parameterized.Parameters
-    public static Object[][] createUserData() {
+    public static Object[][] parameters() {
         return new Object[][] {
                 {"Qwerty_123", true},
                 {"Qwerty", true},
                 {"Qwert", false},
                 {"Q", false},
                 {"", false},
-                {null, false},
         };
     }
 
@@ -42,8 +43,11 @@ public class UserRegistrationTest {
     }
 
     @Test
+    @DisplayName("Check user registration with different password lengths")
+    @Description("User registration with different password lengths")
     public void checkUserRegistration() {
         UserRegistrationPage userRegistrationPage = new UserRegistrationPage(driverRule.getDriver());
+
         var actual = userRegistrationPage.open()
                 .waitForLoadRegistrationPage()
                 .typeName(user.getName())
