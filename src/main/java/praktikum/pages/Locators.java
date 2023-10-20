@@ -3,6 +3,10 @@ package praktikum.pages;
 import org.openqa.selenium.By;
 
 public class Locators {
+    // Кнопка "Конструктор" в верхней части страницы
+    public static final By CONSTRUCTOR_BUTTON = By.xpath(".//p[text()='Конструктор']/parent::a");
+    // Логотип в верхней части страницы
+    public static final By LOGO = By.xpath(".//div[contains(@class, 'logo')]");
     // Кнопка "Личный кабинет" в верхней части страницы
     public static final By USER_PROFILE_BUTTON = By.xpath(".//a[contains(@href, '/account')]");
 
@@ -25,7 +29,6 @@ public class Locators {
 
     // Заголовок "Вход" на экране авторизации пользователя
     public static final By SIGN_IN_TITLE= By.xpath(".//h2[text()='Вход']");
-    // Поле "Email" на экране авторизации пользователя
     // Текст "Некорректный пароль" на экране авторизации пользователя
     public static final By INCORRECT_PASSWORD_TEXT = By.xpath(".//p[text()='Некорректный пароль']");
     // Поле "Email" на экране авторизации пользователя

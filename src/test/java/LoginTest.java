@@ -14,11 +14,11 @@ import praktikum.user.*;
 @RunWith(Parameterized.class)
 public class LoginTest {
 
-    private final UserClient client = new UserClient();
-    private final UserCheck check = new UserCheck();
+    private static final UserClient client = new UserClient();
+    private static final UserCheck check = new UserCheck();
 
-    private User user;
-    private String accessToken;
+    private static User user;
+    private static String accessToken;
     private final AuthSource authSource;
     private final boolean result;
 
@@ -41,8 +41,8 @@ public class LoginTest {
         };
     }
 
-    @Before
-    public void createUser() {
+    @BeforeClass
+    public static void createUser() {
         user = UserGenerator.random();
 
         ValidatableResponse response = client.create(user);
@@ -115,8 +115,8 @@ public class LoginTest {
         authPage.open();
     }
 
-    @After
-    public void tearDown() {
+    @AfterClass
+    public static void tearDown() {
         user = null;
         check.deletedUserSuccessfully(client.delete(accessToken));
     }

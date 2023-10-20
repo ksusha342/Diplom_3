@@ -19,7 +19,7 @@ public class OpenProfilePageTest {
 
 
     @Test
-    public void openProfilePageWithAuthorization() {
+    public void checkOpeningProfilePageWithAuthorization() {
         user = UserGenerator.random();
 
         ValidatableResponse response = client.create(user);
@@ -40,7 +40,7 @@ public class OpenProfilePageTest {
     }
 
     @Test
-    public void openProfilePageWithoutAuthorization() {
+    public void checkOpeningProfilePageWithoutAuthorization() {
         MainPage mainPage = new MainPage(driverRule.getDriver());
 
         var result = mainPage.open()

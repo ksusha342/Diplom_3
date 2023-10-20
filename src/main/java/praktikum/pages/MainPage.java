@@ -67,8 +67,9 @@ public class MainPage {
         return driver.findElement(FILLINGS_SECTION_SELECTED).isDisplayed();
     }
 
-    public void clickSignUpButton() {
+    public ProfilePage clickSignUpButton() {
         driver.findElement(MAIN_PAGE_SIGN_IN_BUTTON).click();
+        return new ProfilePage(driver);
     }
 
     public ProfilePage clickUserProfileButtonWithAuthorization() {

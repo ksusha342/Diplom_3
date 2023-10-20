@@ -39,6 +39,16 @@ public class ProfilePage {
         return this;
     }
 
+    public MainPage clickLogo() {
+        driver.findElement(LOGO).click();
+        return new MainPage(driver);
+    }
+
+    public MainPage clickConstructorButton() {
+        driver.findElement(CONSTRUCTOR_BUTTON).click();
+        return new MainPage(driver);
+    }
+
     public boolean isLogoutSuccessful() {
         new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_INTERVAL))
                 .until(ExpectedConditions.urlToBe(AUTH_PAGE_URL));

@@ -9,7 +9,7 @@ public class OpenConstructorSectionTest {
     public DriverRule driverRule = new DriverRule();
 
     @Test
-    public void openBunsSection() {
+    public void checkOpenBunsSection() {
         MainPage mainPage = new MainPage(driverRule.getDriver());
         var result = mainPage.open()
                 .waitForLoadMainPage()
@@ -21,7 +21,7 @@ public class OpenConstructorSectionTest {
     }
 
     @Test
-    public void openSaucesSection() {
+    public void checkOpenSaucesSection() {
         MainPage mainPage = new MainPage(driverRule.getDriver());
         var result = mainPage.open()
                 .waitForLoadMainPage()
@@ -32,7 +32,7 @@ public class OpenConstructorSectionTest {
     }
 
     @Test
-    public void openFillingsSection() {
+    public void checkOpenFillingsSection() {
         MainPage mainPage = new MainPage(driverRule.getDriver());
         var result = mainPage.open()
                 .waitForLoadMainPage()
