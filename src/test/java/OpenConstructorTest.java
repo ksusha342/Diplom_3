@@ -70,7 +70,6 @@ public class OpenConstructorTest {
 
     @AfterClass
     public static void tearDown() {
-        user = null;
         check.deletedUserSuccessfully(client.delete(accessToken));
     }
 }

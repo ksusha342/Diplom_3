@@ -13,7 +13,7 @@ public class OpenProfilePageTest {
     private final UserClient client = new UserClient();
     private final UserCheck check = new UserCheck();
 
-    private User user;
+
     private String accessToken;
 
     @Rule
@@ -24,7 +24,7 @@ public class OpenProfilePageTest {
     @DisplayName("Check opening profile page by the authorized user")
     @Description("Check that it is possible to open profile page by the authorized user")
     public void checkOpeningProfilePageWithAuthorization() {
-        user = UserGenerator.random();
+        User user = UserGenerator.random();
 
         ValidatableResponse response = client.create(user);
         accessToken = check.createdUserSuccessfully(response);
@@ -60,7 +60,6 @@ public class OpenProfilePageTest {
 
     @After
     public void tearDown() {
-        user = null;
         if (accessToken == null) {
             return;
         }

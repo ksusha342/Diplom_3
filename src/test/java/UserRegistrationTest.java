@@ -64,7 +64,6 @@ public class UserRegistrationTest {
         if (result) {
             deleteRegistrationUser();
         }
-        user = null;
     }
 
     private void deleteRegistrationUser() {
