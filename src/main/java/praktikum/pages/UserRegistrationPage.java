@@ -27,7 +27,7 @@ public class UserRegistrationPage {
 
     public UserRegistrationPage waitForLoadRegistrationPage() {
         new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_INTERVAL))
-                .until(ExpectedConditions.visibilityOfElementLocated(LOGO));
+                .until(ExpectedConditions.visibilityOfElementLocated(SIGN_UP_TITLE));
         return this;
     }
 
@@ -72,8 +72,7 @@ public class UserRegistrationPage {
         }
     }
 
-    public UserRegistrationPage clickSignInButton() {
+    public void clickSignInButton() {
         driver.findElement(REGISTRATION_PAGE_SIGN_IN_BUTTON).click();
-        return this;
     }
 }

@@ -3,8 +3,6 @@ package praktikum.pages;
 import org.openqa.selenium.By;
 
 public class Locators {
-    // Логотип в верхней части страницы
-    public static final By LOGO = By.xpath(".//div[contains(@class, 'logo')]");
     // Кнопка "Личный кабинет" в верхней части страницы
     public static final By USER_PROFILE_BUTTON = By.xpath(".//a[contains(@href, '/account')]");
 
@@ -25,6 +23,9 @@ public class Locators {
     // Кнопка "Войти в аккаунт" на главной странице
     public static final By MAIN_PAGE_SIGN_IN_BUTTON = By.xpath(".//button[text()='Войти в аккаунт']");
 
+    // Заголовок "Вход" на экране авторизации пользователя
+    public static final By SIGN_IN_TITLE= By.xpath(".//h2[text()='Вход']");
+    // Поле "Email" на экране авторизации пользователя
     // Текст "Некорректный пароль" на экране авторизации пользователя
     public static final By INCORRECT_PASSWORD_TEXT = By.xpath(".//p[text()='Некорректный пароль']");
     // Поле "Email" на экране авторизации пользователя
@@ -34,6 +35,8 @@ public class Locators {
     // Кнопка "Войти" на экране авторизации пользователя
     public static final By AUTH_PAGE_SIGN_IN_BUTTON = By.xpath(".//button[text()='Войти']");
 
+    // Заголовок "Вход" на экране авторизации пользователя
+    public static final By SIGN_UP_TITLE= By.xpath(".//h2[text()='Регистрация']");
     // Поле "Имя" на экране регистрации пользователя
     public static final By NEW_USER_NAME_FIELD = By.xpath("//fieldset[1]//input[@name='name']");
     // Поле "Email" на экране регистрации пользователя
@@ -45,7 +48,7 @@ public class Locators {
     // Кнопка "Войти в аккаунт" экране регистрации пользователя
     public static final By REGISTRATION_PAGE_SIGN_IN_BUTTON = By.xpath(".//a[text()='Войти']");
 
-    // Кнопка "Выход" на экране ЛК
+    // Кнопка "Выход" на экране Личного кабинета
     public static final By LOGOUT_BUTTON = By.xpath(".//button[text()='Выход']");
 
     // Кнопка "Войти в аккаунт" экране регистрации пользователя

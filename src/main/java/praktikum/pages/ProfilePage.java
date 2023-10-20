@@ -30,6 +30,10 @@ public class ProfilePage {
         return this;
     }
 
+    public boolean isProfilePageLoadedSuccessfully() {
+        return driver.findElement(LOGOUT_BUTTON).isDisplayed();
+    }
+
     public ProfilePage clickLogoutButton() {
         driver.findElement(LOGOUT_BUTTON).click();
         return this;

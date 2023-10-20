@@ -61,7 +61,7 @@ public class LoginTest {
                 .typePassword(user.getPassword())
                 .clickSignInButton()
                 .waitForLoadMainPage()
-                .isMainPageLoadedSuccessful();
+                .isMainPageLoadedSuccessfully();
 
         Assert.assertEquals(result, actual);
     }
@@ -93,7 +93,7 @@ public class LoginTest {
         MainPage mainPage = new MainPage(driverRule.getDriver());
         mainPage.open()
                 .waitForLoadMainPage()
-                .clickUserProfileButton();
+                .clickUserProfileButtonWithAuthorization();
     }
 
     private void openRegistrationPageAuth() {

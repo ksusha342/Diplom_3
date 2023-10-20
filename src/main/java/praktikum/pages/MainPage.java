@@ -30,7 +30,7 @@ public class MainPage {
         return this;
     }
 
-    public boolean isMainPageLoadedSuccessful() {
+    public boolean isMainPageLoadedSuccessfully() {
         return driver.findElement(MAIN_PAGE_HEADER).isDisplayed();
     }
 
@@ -67,13 +67,17 @@ public class MainPage {
         return driver.findElement(FILLINGS_SECTION_SELECTED).isDisplayed();
     }
 
-    public MainPage clickSignUpButton() {
+    public void clickSignUpButton() {
         driver.findElement(MAIN_PAGE_SIGN_IN_BUTTON).click();
-        return this;
     }
 
-    public MainPage clickUserProfileButton() {
+    public ProfilePage clickUserProfileButtonWithAuthorization() {
         driver.findElement(USER_PROFILE_BUTTON).click();
-        return this;
+        return new ProfilePage(driver);
+    }
+
+    public AuthPage clickUserProfileButtonWithoutAuthorization() {
+        driver.findElement(USER_PROFILE_BUTTON).click();
+        return new AuthPage(driver);
     }
 }
