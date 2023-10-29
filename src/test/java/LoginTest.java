@@ -35,11 +35,11 @@ public class LoginTest {
     @Parameterized.Parameters
     public static Object[][] parameters() {
         return new Object[][]{
-                {AuthSource.main, true},
-                {AuthSource.profile, true},
-                {AuthSource.registration, true},
-                {AuthSource.recovery, true},
-                {AuthSource.link, true}
+                {AuthSource.MAIN, true},
+                {AuthSource.PROFILE, true},
+                {AuthSource.REGISTRATION, true},
+                {AuthSource.RECOVERY, true},
+                {AuthSource.LINK, true}
         };
     }
 
@@ -73,15 +73,15 @@ public class LoginTest {
     private void openAuthPage(AuthSource source) {
         switch (source) {
 
-            case main:
+            case MAIN:
                 openMainPageAuth();
-            case profile:
+            case PROFILE:
                 openProfilePageAuth();
-            case registration:
+            case REGISTRATION:
                 openRegistrationPageAuth();
-            case recovery:
+            case RECOVERY:
                 openRecoveryPageAuth();
-            case link:
+            case LINK:
                 openLinkAuth();
         }
     }
